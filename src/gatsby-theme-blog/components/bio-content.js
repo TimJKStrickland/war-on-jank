@@ -1,16 +1,15 @@
 import React, { Fragment } from "react"
+import { Link } from "gatsby";
 import { Styled } from "theme-ui"
-
-/**
- * Change the content to add your own bio
- */
 
 export default () => (
   <Fragment>
-    This is where <Styled.a href="http://example.com/">your name</Styled.a>
+    
+    <Styled.h3 className="">
+      <Styled.a to="/about">Tim JK Strickland </Styled.a>
+       is a Full Stack Developer and is a soldier in the war on jank.
+    </Styled.h3>
     {` `}
     goes.
-    <br />
-    Or whatever, you make the rules.
   </Fragment>
 )
