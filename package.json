@@ -12,5 +12,8 @@
     "gatsby-theme-blog": "^1.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  }
+  },
+  "workspaces": [
+    "gatsby-theme-blog", "gatsby-theme-buttery"
+  ]
 }

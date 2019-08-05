@@ -1,4 +1,10 @@
 module.exports = {
+  // __experimentalThemes: [
+  //   {
+  //     resolve: "gatsby-theme-buttery",
+  //     options: {},
+  //   },
+  // ],
   plugins: [
     {
       resolve: `gatsby-theme-blog`,

@@ -69,3 +69,4 @@ yarn-error.log
 .yarn-integrity
 # VS CODE
 blog.code-workspace
+/.vscode/
