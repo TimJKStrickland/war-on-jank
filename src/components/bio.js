@@ -54,7 +54,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong>. He lives in Oakland, and works online, and is churning away to make our digital lives as buttery as possible. 
+        Written by <strong>{author}</strong>. He lives in Oakland, and works online, and is churning away to make our digital lives as buttery as possible.
         {` `}
       </p>
     </div>
