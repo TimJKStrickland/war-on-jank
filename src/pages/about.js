@@ -1,14 +1,13 @@
-import React from "react"
-import Layout from "../components/layout"
-import { rhythm } from "../utils/typography"
+import React, { Fragment } from "react"
+import Header from '../components/header'
 
 class About extends React.Component {
   render() {
 
     return (
-      <Layout>
-        
-      </Layout>
+      <Fragment>
+        <Header/>
+      </Fragment>
     )
   }
 }

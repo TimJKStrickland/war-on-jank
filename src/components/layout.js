@@ -64,10 +64,11 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main>{children}</main>
         <footer>
+          <Bio />
+          {` `}
           © {new Date().getFullYear()} TIMJKSTRICKLAND,
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby Powered</a>
-          <Bio />
         </footer>
       </div>
     )
