@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import BlogLayout from "../components/bloglayout"
+import Header from "../components/header"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -13,6 +14,7 @@ class BlogIndex extends React.Component {
 
     return (
       <BlogLayout location={this.props.location} title={siteTitle}>
+        <Header />
         <SEO title="All posts" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

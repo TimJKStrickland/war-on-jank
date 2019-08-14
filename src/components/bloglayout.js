@@ -1,7 +1,6 @@
 
 import React from "react"
-import Bio from "./bio"
-import Header from "./header"
+import Footer from "./footer"
 
 import { rhythm } from "../utils/typography"
 
@@ -17,10 +16,9 @@ class BlogLayout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <Header/>
         <main>{children}</main>
         <footer>
-          <Bio />
+          <Footer/>
           {` `}
           © {new Date().getFullYear()} TIMJKSTRICKLAND,
           {` `}

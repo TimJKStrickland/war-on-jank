@@ -1,60 +1,33 @@
 import React from "react";
 
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import { rhythm, scale } from "../utils/typography"
+import { graphql, useStaticQuery } from 'gatsby';
+import Image from "gatsby-image"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          title
+      file(absolutePath: { regex: "/header-icon/" }) {
+        childImageSharp {
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
   `)
-  const { title } = data.site.siteMetadata
   return (
-    <header
-      style={{
-        display: `flex`,
-        justifyContent: `space-between`,
-        alignItems: `center`}}>
-      <h1
+    <header>
+      <Image
+        fixed={data.file.childImageSharp.fixed}
+        alt={`War on Jank logo`}
         style={{
-          ...scale(0.625),
-          marginBottom: rhythm(0.75),
-          marginTop: 0,
+          marginBottom: 0,
+          minWidth: 50,
+          minHeight: 50,
+          borderRadius: `100%`,
+          display:`block`,
         }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >{title}
-        </Link>
-      </h1>
-      <h1
-        style={{
-          ...scale(0.625),
-          marginBottom: rhythm(0.75),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/about`}
-        >
-          Who runs this?
-        </Link>
-      </h1>
+      />
     </header>
   )
 }
