@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import BlogLayout from "../components/bloglayout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -12,7 +12,7 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <BlogLayout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
-      </Layout>
+      </BlogLayout>
     )
   }
 }
