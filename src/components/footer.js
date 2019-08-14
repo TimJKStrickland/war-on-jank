@@ -3,8 +3,6 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { rhythm, scale } from "../utils/typography"
 
-import Bio from './bio'
-
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -17,8 +15,11 @@ const Footer = () => {
   `)
   const { title } = data.site.siteMetadata
   return (
-    <footer>
-      <Bio/>
+    <footer
+      style={{
+        borderTop: `1px solid rgba(33,33,233,0.2)`,
+        paddingTop: `${rhythm(1)}`
+      }}>
       <div
         style={{
           display: `flex`,
@@ -58,10 +59,18 @@ const Footer = () => {
             }}
             to={`/about`}
           >
-            Who runs this?
+            About
           </Link>
         </h1>
       </div>
+      {` `}
+      <p
+        style={{
+        }}
+      >
+        © {new Date().getFullYear()} TIMJKSTRICKLAND, <a href="https://www.gatsbyjs.org">Gatsby Powered</a>
+      </p>
+      {` `}
     </footer>
   )
 }

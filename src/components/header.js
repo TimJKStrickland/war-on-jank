@@ -21,9 +21,9 @@ const Header = () => {
         fixed={data.file.childImageSharp.fixed}
         alt={`War on Jank logo`}
         style={{
-          marginBottom: 0,
           minWidth: 50,
           minHeight: 50,
+          margin: `0 auto`,
           borderRadius: `100%`,
           display:`block`,
         }}

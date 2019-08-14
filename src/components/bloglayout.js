@@ -13,17 +13,11 @@ class BlogLayout extends React.Component {
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(0.5)} ${rhythm(3 / 4)} ${rhythm(1)}`,
         }}
       >
         <main>{children}</main>
-        <footer>
-          <Footer/>
-          {` `}
-          © {new Date().getFullYear()} TIMJKSTRICKLAND,
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby Powered</a>
-        </footer>
+        <Footer/>
       </div>
     )
   }
