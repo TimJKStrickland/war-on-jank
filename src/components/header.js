@@ -7,8 +7,8 @@ const Header = () => {
 
   return (
     <header>
-      <Link 
-        to={`/`} 
+      <Link
+        to={`/`}
         style={{
           display: `flex`,
           justifyContent: `center`,
