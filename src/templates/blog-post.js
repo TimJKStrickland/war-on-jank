@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import BlogLayout from "../components/bloglayout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-
+import Header from "../components/header"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -13,6 +13,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <BlogLayout location={this.props.location} title={siteTitle}>
+        <Header />
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
